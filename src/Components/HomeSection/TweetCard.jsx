@@ -6,6 +6,11 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import LogoutIcon from '@mui/icons-material/Logout';
 import EditIcon from '@mui/icons-material/Edit';
 import { Menu, MenuItem } from "@mui/material";
+import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FileUploadIcon from '@mui/icons-material/FileUpload';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const TweetCard = ({ tweet }) => {
     const navigate = useNavigate();
@@ -20,6 +25,21 @@ const TweetCard = ({ tweet }) => {
     const handleDelete = () => {
         // delete logic here
         handleClose();
+    }
+
+    const handleOpenReplyModel = () => {
+        // open reply model logic here
+        console.log("Open reply model");
+    }
+
+    const handleCreateReTweet = () => {
+        // create retweet logic here
+        console.log("Create retweet");
+    }
+
+    const handleLikeTweet = () => {
+        // like tweet logic here
+        console.log("Like tweet");
     }
 
     return (
@@ -87,10 +107,29 @@ const TweetCard = ({ tweet }) => {
                         <img className="w-[28rem] border border-gray-400 p-5 rounded-md" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Q0ue06sLTd7p0SbG_JKOEieaPj9xD8Thpg&s" alt="" />
                     </div>
                     <div className="flex py-5 flex-wrap justify-between items-center">
+
                         <div className="flex space-x-3 items-center text-gray-600">
-                            {/* // chat bubble icon */}
+                            <ChatBubbleOutlineIcon className="cursor-pointer" onClick={handleOpenReplyModel}/>
+                            <p>45</p>
+                        </div>
 
+                        <div className={`${true ? "text-pink-600": "text-gray-600"} flex space-x-3 items-center`}>
+                            <RepeatIcon className="cursor-pointer" onClick={handleCreateReTweet}/>
+                            <p>45</p>
+                        </div>
 
+                        <div className={`${true ? "text-pink-600": "text-gray-600"} flex space-x-3 items-center`}>
+                            {true ? <FavoriteIcon className="cursor-pointer" onClick={handleLikeTweet}/> : <FavoriteBorderIcon className="cursor-pointer" onClick={handleLikeTweet}/>}
+                            <p>45</p>
+                        </div>
+
+                        <div className="flex space-x-3 items-center text-gray-600">
+                            <BarChartIcon className="cursor-pointer" onClick={handleOpenReplyModel}/>
+                            <p>45</p>
+                        </div>
+
+                        <div className="flex space-x-3 items-center text-gray-600">
+                            <FileUploadIcon className="cursor-pointer" onClick={handleOpenReplyModel}/>
                         </div>
 
                     </div>
