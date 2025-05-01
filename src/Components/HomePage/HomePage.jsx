@@ -1,25 +1,26 @@
 import React from 'react';
-import { Grid } from '@mui/material';
 import Navigation from '../Navigation/Navigation';
 import HomeSection from '../HomeSection/HomeSection';
 
 const HomePage = () => {
   return (
-    <Grid container xs={12} className='px-5 lg:px-36 justify-between'>
+    <div className="flex max-w-[1265px] mx-auto">
+      {/* Left sidebar - hidden on mobile */}
+      <div className="hidden lg:block lg:w-1/4 xl:w-1/5 pr-4 sticky top-0 h-screen">
+        <Navigation />
+      </div>
 
-        <Grid item xs={0} lg={2.5} className='hidden lg:block relative'>
-            <Navigation/>
-        </Grid>
+      {/* Middle section - visible on all devices */}
+      <div className="w-full lg:w-2/4 xl:w-3/5 border-x border-gray-200 min-h-screen">
+        <HomeSection />
+      </div>
 
-        <Grid item xs={12} lg={6} className='hidden lg:block relative'>
-            <HomeSection/>
-        </Grid>
-
-        <Grid item xs={0} lg={3} className='hidden lg:block relative'>
-            <p className='text-center'>right part</p>
-        </Grid>
-      
-    </Grid>
+      {/* Right sidebar - hidden on mobile */}
+      <div className="hidden lg:block lg:w-1/4 xl:w-1/5 pl-4 sticky top-0 h-screen">
+        <p className='text-center'>right part</p>
+      </div>
+    </div>
   );
 }
+
 export default HomePage;

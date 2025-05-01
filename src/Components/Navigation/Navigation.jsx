@@ -26,8 +26,8 @@ const Navigation = () => {
 
     return (
         <>
-            <div className = 'h-screen sticky top-0'>
-                <div className = 'py-5'>
+            <div className = 'h-screen sticky top-0 px-4'>
+                <div className = 'py-5 px-3'>
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3zTa3wuGOL67dvKobhOsLuqIx8P-bnrQS7Q&s" alt="Logo" className="w-1/6" />
                 </div>
                 <div className="space-y-6">
@@ -42,7 +42,7 @@ const Navigation = () => {
                 </div>
 
                 <div>
-                    <button className="bg-[#1d9bf0] hover:bg-[#1a8cd8] text-white font-bold py-3 px-4 rounded-full w-full mt-5 transition-colors duration-200">
+                    <button className="bg-[#1d9bf0] hover:bg-[#1a8cd8] text-white font-bold py-3 px-4 rounded-full w-full mt-5 transition-colors duration-200 ">
                         TWEET
                     </button>
                 </div>
