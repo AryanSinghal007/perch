@@ -16,6 +16,7 @@ const HomePage = () => {
       <div className="w-full lg:w-2/4 xl:w-3/5 border-x border-gray-200 min-h-screen px-5 lg:px-10">
         <Routes>
           <Route path="/" element={<HomeSection />} />
+          <Route path="/home" element={<HomeSection />} />
           <Route path="/profile/:id" element={<Profile />} />
           <Route path="/tweet/:id" element={<TweetDetails />} />
         </Routes>

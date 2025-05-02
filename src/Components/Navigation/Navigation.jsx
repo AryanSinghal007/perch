@@ -48,7 +48,8 @@ const Navigation = () => {
                 </div>
 
                 <div className="flex items-center space-x-3 mt-5 p-2">
-                    <Avatar alt="username" src="https://toppng.com/uploads/preview/avatar-png-115540218987bthtxfhls.png" />
+                    <Avatar alt="username"                         
+                    src="https://t3.ftcdn.net/jpg/08/20/75/34/360_F_820753420_Nqjb8USaj0J7K82Uo6yZLhCv4roZFBj7.jpg" />
                     <div>
                         <div className="font-bold text-sm">Aryan Singhal</div>
                         <div className="text-gray-500 text-sm">@aryansinghal</div>

@@ -30,7 +30,7 @@ const Profile = () => {
     return (
         <div className="bg-white">
             
-            <section className="z-50 flex items-center sticky top-0 bg-white bg-opacity-95 px-4 mt-4">
+            <section className="bg-white z-50 flex items-center sticky top-0 bg-white bg-opacity-95 px-4 mt-4 mb-4">
                 <KeyboardBackspaceIcon
                     className="cursor-pointer hover:text-gray-900"
                     onClick={handleBack}
