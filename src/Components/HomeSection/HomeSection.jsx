@@ -56,7 +56,7 @@ const HomeSection = () => {
                     <div className='w-full'>
                         <form onSubmit={formik.handleSubmit} className='flex flex-col space-y-5'>
                             <div>
-                                <input type="text" name="content" placeholder='What is happening' 
+                                <input type="text" name="content" placeholder='What is happening...' 
                                 className={`border-none outline-none text-xl bg-transparent`}
                                 {...formik.getFieldProps('content')}/>
                                 {formik.errors.content && formik.touched.content (
