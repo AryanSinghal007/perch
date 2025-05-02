@@ -17,14 +17,14 @@ const RightPanel = () => {
             <input 
                 className="py-3 rounded-full bg-gray-100 text-gray-500 w-full pl-12 focus:outline-none focus:ring-1 focus:ring-blue-200" 
                 type="text" 
-                placeholder="Search Twitter"
+                placeholder="Search pearch"
             />            
             <div className='absolute top-0 left-0 pl-3 pt-3'>
                 <SearchIcon className='text-gray-500' />
             </div>
             <Brightness4Icon 
-            className='text-gray-500 ml-3 cursor-pointer'
-            onClick={handleChangeTheme} 
+                className='text-gray-500 ml-3 cursor-pointer'
+                onClick={handleChangeTheme} 
             />
 
         </div>

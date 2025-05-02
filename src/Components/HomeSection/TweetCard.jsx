@@ -55,6 +55,7 @@ const TweetCard = ({ tweet }) => {
             alt="username" 
             src="https://toppng.com/uploads/preview/avatar-png-115540218987bthtxfhls.png" 
             className="cursor-pointer"
+            sx={{ width: 35, height: 35 }}
             onClick={() => navigate(`/profile/${6}`)}
             />
             <div className="w-full">

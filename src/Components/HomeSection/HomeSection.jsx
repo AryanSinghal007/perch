@@ -52,7 +52,11 @@ const HomeSection = () => {
             </section>
             <section className={`pb-10`}>
                 <div className='flex space-x-5'>
-                    <Avatar alt="username" src="https://toppng.com/uploads/preview/avatar-png-115540218987bthtxfhls.png" />
+                    <Avatar 
+                        alt="username" 
+                        src="https://toppng.com/uploads/preview/avatar-png-115540218987bthtxfhls.png" 
+                        sx={{ width: 35, height: 35 }}
+                    />
                     <div className='w-full'>
                         <form onSubmit={formik.handleSubmit} className='flex flex-col space-y-5'>
                             <div>
