@@ -53,7 +53,7 @@ const TweetCard = ({ tweet }) => {
         <div className="flex space-x-5">
             <Avatar 
             alt="username" 
-            src="https://toppng.com/uploads/preview/avatar-png-115540218987bthtxfhls.png" 
+            src="https://t3.ftcdn.net/jpg/08/20/75/34/360_F_820753420_Nqjb8USaj0J7K82Uo6yZLhCv4roZFBj7.jpg"
             className="cursor-pointer"
             sx={{ width: 35, height: 35 }}
             onClick={() => navigate(`/profile/${6}`)}
@@ -103,7 +103,7 @@ const TweetCard = ({ tweet }) => {
                 </div>
 
                 <div className="mt-2">
-                    <div className="cursor-pointer">
+                    <div onClick={() => navigate(`/tweet/${3}`)} className="cursor-pointer">
                         <p className="mb-2 p-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
                         <img className="w-[28rem] border border-gray-400 p-5 rounded-md" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Q0ue06sLTd7p0SbG_JKOEieaPj9xD8Thpg&s" alt="" />
                     </div>

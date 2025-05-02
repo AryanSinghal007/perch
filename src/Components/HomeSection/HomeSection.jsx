@@ -54,7 +54,7 @@ const HomeSection = () => {
                 <div className='flex space-x-5'>
                     <Avatar 
                         alt="username" 
-                        src="https://toppng.com/uploads/preview/avatar-png-115540218987bthtxfhls.png" 
+                        src="https://t3.ftcdn.net/jpg/08/20/75/34/360_F_820753420_Nqjb8USaj0J7K82Uo6yZLhCv4roZFBj7.jpg"
                         sx={{ width: 35, height: 35 }}
                     />
                     <div className='w-full'>
