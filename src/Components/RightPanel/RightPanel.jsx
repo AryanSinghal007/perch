@@ -3,13 +3,30 @@ import SearchIcon from '@mui/icons-material/Search';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { Button } from '@mui/material';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+import SubscriptionModal from '../SubscriptionModal/SubscriptionModal';
 
 const RightPanel = () => {
+
+    const [openSubscriptionModal, setOpenSubscriptionModal] = React.useState(false);
 
     const handleChangeTheme = () => {
         // Logic to change the theme
         console.log("Change theme");
     }
+
+    const handleOpenSubscriptionModal = () => {
+        // Logic to open the subscription modal
+        console.log("Open subscription modal");
+        setOpenSubscriptionModal(true);
+    }
+
+    const handleCloseSubscriptionModal = () => {
+        // Logic to close the subscription modal
+        console.log("Close subscription modal");
+        setOpenSubscriptionModal(false);
+    }
+
+
 
   return (
     <div className='py-5 sticky top'>
@@ -17,7 +34,7 @@ const RightPanel = () => {
             <input 
                 className="py-3 rounded-full bg-gray-100 text-gray-500 w-full pl-12 focus:outline-none focus:ring-1 focus:ring-blue-200" 
                 type="text" 
-                placeholder="Search pearch"
+                placeholder="Search perch"
             />            
             <div className='absolute top-0 left-0 pl-3 pt-3'>
                 <SearchIcon className='text-gray-500' />
@@ -32,7 +49,10 @@ const RightPanel = () => {
         <section className='my-5'>
             <h1 className='text-xl font-bold'> Get Verified</h1>
             <h1 className='font-bold my-3'> Subscribe to unlock more features</h1>
-            <Button variant = "contained" sx = {{backgroundColor: "#1d9bf0", color: "white", width: "100%", padding: "10px", paddingX: "20px", borderRadius: "25px"}} > 
+            <Button 
+                variant = "contained" 
+                sx = {{backgroundColor: "#1d9bf0", color: "white", width: "100%", padding: "10px", paddingX: "20px", borderRadius: "25px"}}
+                onClick={handleOpenSubscriptionModal}> 
                 Get Verified
             </Button>
         </section>
@@ -50,6 +70,14 @@ const RightPanel = () => {
                 </div>
             )}
             
+        </section>
+
+        <section>
+            <SubscriptionModal 
+                open={openSubscriptionModal}
+                handleClose={handleCloseSubscriptionModal}
+                handleOpen={handleOpenSubscriptionModal}
+            />
         </section>
 
     </div>

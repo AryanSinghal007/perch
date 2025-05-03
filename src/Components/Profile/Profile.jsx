@@ -6,10 +6,12 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import TweetCard from '../HomeSection/TweetCard';
+import ProfileModal from './ProfileModal';
 
 const Profile = () => {
     const navigate = useNavigate();
     const [tabValue, setTabValue] = React.useState(0);
+    const [openProfileModal, setOpenProfileModal] = React.useState(false);
     
     const handleBack = () => {
         navigate(-1);
@@ -17,6 +19,11 @@ const Profile = () => {
 
     const handleOpenProfileModel = () => {
         console.log("Open Profile Model");
+        setOpenProfileModal(true);
+    };
+
+    const handleCloseProfileModal = () => {
+        setOpenProfileModal(false);
     };
 
     const handleFollowUser = () => {
@@ -147,7 +154,7 @@ const Profile = () => {
                 </Tabs>
             </Box>
             
-            {/* Content area - Could contain tweets */}
+            
             <section className="px-4 py-4">
                 {tabValue === 0 && (
                     <div className="space-y-4">
@@ -181,6 +188,15 @@ const Profile = () => {
                     </p>
                 )}
             </section>
+
+            <section>
+                <ProfileModal 
+                    open={openProfileModal} 
+                    handleClose={handleCloseProfileModal} 
+                />
+            </section>
+
+
         </div>
     );
 }

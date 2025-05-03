@@ -11,10 +11,13 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import ReplyModal from "./ReplyModal";
 
 const TweetCard = ({ tweet }) => {
     const navigate = useNavigate();
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const [openReplyModal, setOpenReplyModal] = React.useState(false);
+    
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -30,6 +33,13 @@ const TweetCard = ({ tweet }) => {
     const handleOpenReplyModel = () => {
         // open reply model logic here
         console.log("Open reply model");
+        setOpenReplyModal(true);
+    }
+
+    const handleCloseReplyModel = () => {
+        // close reply model logic here
+        console.log("Close reply model");
+        setOpenReplyModal(false);
     }
 
     const handleCreateReTweet = () => {
@@ -43,12 +53,13 @@ const TweetCard = ({ tweet }) => {
     }
 
     return (
+        <>
         
-        // <div className="flex items-center font-semibold text-gray-700 py-2">
+        {/* // <div className="flex items-center font-semibold text-gray-700 py-2">
         //     <RepeatIcon/>
         //     <p>You retweet</p>
 
-        // </div>
+        // </div> */}
 
         <div className="flex space-x-5">
             <Avatar 
@@ -137,6 +148,15 @@ const TweetCard = ({ tweet }) => {
                 </div>
             </div>
         </div> 
+
+        <section>
+        <ReplyModal 
+            open={openReplyModal} 
+            handleClose={handleCloseReplyModel} 
+            tweet={tweet} // Pass the tweet prop (though we're using dummy data here)
+        />
+        </section>
+        </>
     );
 }
 export default TweetCard;
